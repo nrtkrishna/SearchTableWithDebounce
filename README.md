@@ -2,26 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
 
-## Development server
+# Start json server
+Go to root folder of the project in terminal. Goto `server` folder and execute belo command
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`json-server --watch db.json`
 
-## Code scaffolding
+This will start json server which serves the db.json content with certain endpoints like `http://localhost:3000/treatments`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Start the angular application
 
-## Build
+Goto root folder in another terminal window and start the application using `npm start`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Treatments are retrieved by using fake REST API (https://github.com/typicode/json-server). You can find db.json file in `server` folder of the repository.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Search field validation:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Treatment code must include at least three identical letters, regardless of order. For example, treatment codes "aaa", "aa2a" and "zz222z" are valid, while "aabbcc" is not.
