@@ -1,0 +1,5 @@
+<app-treatments-table
+  [dataSource]="dataSource$ | async"
+  [validationError]="validationError"
+  (applyFilterEmitter)="applySearchFilter($event)"
+></app-treatments-table>
